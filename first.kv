@@ -1,0 +1,11 @@
+<FirstLayout@BoxLayout>:
+    count: 0
+    orientation: "vertical"
+    padding: 10
+    Label:
+        text: "Button Not Pressed" if root.count==0 else "Button is pressed "+str(root.count)+" time!" if root.count==1 else "Button is pressed "+str(root.count)+" times!"
+    Button:
+        text: "Press Me"
+        size_hint: (1,0.3)
+        on_press: root.count=root.count+1
+FirstLayout:
