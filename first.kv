@@ -1,6 +1,12 @@
-<FirstLayout@BoxLayout>:
-    inc: Increment
-    count: 0
+<ReactObject>:
+    size: 50, 50
+    canvas:
+        Rectangle:
+            size: 50, 50
+            pos: self.pos
+<FirstWidget@BoxLayout>:
+    obj: react_object
+    center: self.center
     orientation: "vertical"
     padding: 10
     Label:
@@ -9,4 +15,5 @@
         text: "Press Me"
         size_hint: (1,0.3)
         on_press: root.count=root.count+1
-FirstLayout:
+    ReactObject:
+        id: react_object
